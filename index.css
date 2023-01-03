@@ -1,0 +1,127 @@
+/*/The symbol of "*" in css means all elements where I am describing all elements/*/
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+/*/1fr is equal to 25% of avaliable space is divided into 1 column/*/
+.container{
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 250px 1fr 250px;
+}
+@media only screen and (max-width:48rem){
+    .container{
+        grid-template-columns: 100%;
+    }
+}
+/*/items list starts from here/*/
+#items{
+    background: white;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    padding: 0 35px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+    margin-top: -15px;
+
+}
+.items-list a{
+    display: block;
+    border-left: 0.5rem solid #A1F1C2;
+    text-decoration:none;
+    font-family: "Black Ops One";
+    font-size: 28px;
+    margin: 10px 0px;
+    margin-left: 7px;
+    padding: 5px 25px;
+    color: rgb(90,90,90);
+    font-weight:350;
+}
+.items-list a:hover{    
+    background:#A1F1C2;
+}
+#food{
+    background: white;
+    overflow: srcoll;
+    overflow-x: hidden;
+    box-sizing: content-box;
+}
+
+#adress{
+    align-items: center;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: sticky;
+    background: white;
+    z-index: 1;
+    top: 0;
+    justify-content: space-between;
+}
+#adress .current{
+    font-size: 25px;
+}
+.location{
+    width: 125px;
+    font-family: 'Amazon Ember', sans-serif;
+    color:gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border: 2px solid #858b94   ;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.location i{
+    font-size: 22px;
+}
+#addtomycart{
+    background-color: lavenderblush;
+}
+.nav_bar i,.user i{
+    font-size:20px;
+    margin: 0 16px;
+    color: #DC143C;
+    border: 1px solid #DC143C;
+    padding: 7px 15px;
+    border-radius: 21px;
+    cursor: pointer;
+}
+.nav_bar i:active{
+    background-color: #DC143C;
+    color: whitesmoke;
+}
+
+::-webkit-full-screen{
+    display: none;
+}
+/*/Loader/*/
+.loader-container{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 10000; /*/z index is kept to 10000 to make it first element and ahead of all others/*/
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-container.fade-out{
+    top: -150%;
+}
+
